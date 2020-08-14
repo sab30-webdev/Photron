@@ -1,9 +1,13 @@
 import React, { useEffect } from "react";
 import useStorage from "./../hooks/useStorage";
 import { motion } from "framer-motion";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const ProgressBar = ({ file, setFile }) => {
-  const { progress, url } = useStorage(file);
+  const { user } = useAuth0();
+  const userCollection = user.nickname;
+  const { progress, url } = useStorage(file, userCollection);
+
   useEffect(() => {
     if (url) {
       setFile(null);

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;515;600;700&display=swap");
 
 :root {
   --primary: #efb6b2;
@@ -8,7 +8,7 @@
 
 /* base styles & title */
 body {
-  font-family: "Noto Serif";
+  font-family: "Quicksand", sans-serif;
   color: var(--secondary);
 }
 .App {
@@ -20,6 +20,7 @@ body {
   font-size: 1.2rem;
   letter-spacing: 2px;
   font-weight: normal;
+  font-size: 1.8rem;
 }
 .title h2,
 .title p {
@@ -79,6 +80,10 @@ label:hover {
   grid-gap: 40px;
 }
 
+.img-grid p {
+  font-size: 20px;
+}
+
 .img-wrap {
   overflow: hidden;
   height: 0;
@@ -112,4 +117,73 @@ label:hover {
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
   border: 3px solid white;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.firegram {
+  color: var(--primary);
+  font-size: 50px;
+}
+
+.auth-btn {
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
+  background-color: var(--primary);
+  font-size: 25px;
+  padding: 10px 20px;
+  margin-top: 25px;
+  border-radius: 50px;
+  transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  outline: none;
+}
+
+.auth-btn:hover {
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  background-color: var(--secondary);
+}
+
+.logout {
+  position: absolute;
+  right: 20px;
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user h2 {
+  font-size: 1.8rem;
+}
+
+.user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 450px) {
+  .img-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 20px auto;
+  }
+
+  .backdrop img {
+    max-width: 90%;
+    max-height: 100%;
+  }
 }
